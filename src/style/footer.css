@@ -1,0 +1,15 @@
+footer{
+    background: rgb(41, 41, 41);
+    width: 100%;
+    padding: 20px 0;
+}
+
+.footer__items img{
+    width: 30px;
+}
+.footer__items p{
+    font-size: 23px;
+}
+.footer__social-link .row{
+ gap: 10px;
+}

@@ -1,0 +1,12 @@
+.alpha img{
+    width: 100%;
+}
+
+.alpha{
+    margin: 0;
+    overflow: hidden;
+}
+
+.swiper.alpha{
+    padding: 0 !important;
+}

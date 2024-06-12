@@ -1,0 +1,10 @@
+section.products .row{
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+.products h1{
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 35px;
+}

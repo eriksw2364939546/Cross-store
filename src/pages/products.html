@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/header.css">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../style/footer.css">
+    <link rel="stylesheet" href="../style/product-card.css">
+    <link rel="stylesheet" href="../style/allProducts.css">
+    <link rel="stylesheet" href="../style/basketPage.css">
+    <link rel="stylesheet" href="../style/basketProduct.css">
+    <title>All Products</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row">
+
+                <div class="header__logo"><a href="#">CROSS.COM</a></div>
+                <div class="header__menu">
+
+                    <nav>
+                        <div class="row">
+                            <div class="header__item"><a href="../../index.html">Home</a></div>
+                            <div class="header__item"><a href="#">All goods</a></div>
+                            <div class="header__item basket"><a href="#"><img src="../img/bask.png" alt="basket img"></a></div>
+                        </div>
+                    </nav>
+                </div>
+
+                <button id="burger" class="header__burger-btn">
+                    <figure></figure>
+                    <figure></figure>
+                    <figure></figure>
+                 </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+		<section class="products">
+			<div class="container">
+				<h1>All products</h1>
+				<div class="products__list row">
+
+				</div>
+			</div>
+		</section>
+	</main>
+
+    <footer>
+        <div class="container">
+            <div class="footer__items">
+                <div class="row">
+                    <p>All rights reserved:</p>
+                    <div class="footer__social-link">
+                        <div class="row">
+                            <a href="#"><img src="../img/tiktok.png" alt="footer tik-tok img"></a>
+                            <a href="#"><img src="../img/insta.png" alt="footer instagram img"></a>
+                            <a href="#"><img src="../img/fb.png" alt="footer facebook img"></a>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <div class="basket-modal row">
+		<div class="basket__modal-window">
+			<div class="basket__header">
+				<div class="row">
+					<h3>In the basket</h3>
+					<button>&times;</button>
+				</div>
+			</div>
+			<div class="basket__main-list">
+
+			</div>
+			<div class="basket__footer">
+				<div class="row">
+					<p><a href="../pages/products.html"> &lt; Back to products</a></p>
+
+					<div class="buy__products-is__basket">
+						<div class="row">
+							<p class="products__receipt">The total amount of the order - <span>1500</span> $</p>
+							<button><a href="../pages/recipes.html">Place an Order</a></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <script defer src="../script/productPage/allProducts.js" type="module"></script>
+    
+</body>
+</html>

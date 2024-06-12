@@ -1,0 +1,101 @@
+.swiper-button-next::after{
+    display: none;
+}
+
+.swiper-button-prev::after{
+    display: none;
+}
+
+.swiper{
+    padding: 0 10px !important;
+}
+
+
+.swiper-button-next, .swiper-button-prev{
+z-index: 11 !important;
+cursor: pointer !important;
+font-size: 36px;
+position: absolute;
+top: auto !important;
+bottom: 8px !important;
+left: 5px !important;
+width: 60px !important;
+border-radius: 30px;
+background-color: rgba(0, 0, 0, 0.345);
+color: white !important;
+
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover{
+	box-shadow: 0px 0px 5px 0px white;
+}
+.swiper-button-next{
+    left: 95% !important;
+}
+
+
+
+.swiper-button-next:hover, .swiper-button-prev:hover{
+cursor: pointer !important;
+}
+
+
+.swiper{
+    padding-top: 20px !important;
+    padding-bottom: 65px !important;
+}
+
+@media all and (max-width: 1333px){
+    .swiper-button-next{
+        left: 94% !important;
+    } 
+}
+
+@media all and (max-width: 1131px){
+    .swiper-button-next{
+        left: 93% !important;
+    } 
+}
+/* @media all and (max-width: 995px){
+    .swiper-button-next{
+        left: 92% !important;
+    } 
+} */
+
+@media all and (max-width: 888px){
+    .swiper-button-next{
+        left: 90% !important;
+    } 
+}
+
+/* @media all and (max-width: 748px){
+    .swiper-button-next{
+        left: 89% !important;
+    } 
+} */
+@media all and (max-width: 685px){
+    .swiper-button-next{
+        left: 86% !important;
+    } 
+}
+
+/* @media all and (max-width: 571px){
+    .swiper-button-next{
+        left: 82% !important;
+    } 
+} */
+@media all and (max-width: 472px){
+    .swiper-button-next{
+        left: 80% !important;
+    } 
+}
+
+/* @media all and (max-width: 442px){
+    .swiper-button-next{
+        left: 67% !important;
+    } 
+} */
+
+
+
+

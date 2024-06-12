@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cross.com</title>
+	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="./src/style/header.css">
+	<link rel="stylesheet" href="./src/style/alpha.css">
+	<link rel="stylesheet" href="./src/style/bestseller.css">
+	<link rel="stylesheet" href="./src/style/footer.css">
+	<link rel="stylesheet" href="./src/style/stock.css">
+	<link rel="stylesheet" href="./src/style/accessories.css">
+	<link rel="stylesheet" href="./src/style/slider.css">
+	<link rel="stylesheet" href="./src/style/product-card.css">
+	<link rel="stylesheet" href="./src/style/feedback.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="./src/style/comments.css">
+	<link rel="stylesheet" href="./src/style/basketPage.css">
+	<link rel="stylesheet" href="./src/style/basketProduct.css">
+
+
+</head>
+
+<body>
+	<header class="header">
+		<div class="container">
+			<div class="row">
+
+				<div class="header__logo"><a href="#">CROSS.COM</a></div>
+				<div class="header__menu">
+
+					<nav>
+						<div class="row">
+							<div class="header__item"><a href="#">Home</a></div>
+							<div class="header__item"><a href="./src/pages/products.html">All goods</a></div>
+							<div class="header__item basket"><a href="#"><img src="./src/img/bask.png" alt="basket img"></a>
+							</div>
+						</div>
+					</nav>
+				</div>
+
+				<button id="burger" class="header__burger-btn">
+					<figure></figure>
+					<figure></figure>
+					<figure></figure>
+				</button>
+			</div>
+		</div>
+	</header>
+	<main>
+
+
+		<section class="alpha">
+			<div class="swiper-wrapper">
+				<img class="swiper-slide" src="./src/img/alpha.jpeg" alt="alpha img">
+				<img class="swiper-slide" src="./src/img/alpha1.jpg" alt="alpha 1 img">
+				<img class="swiper-slide" src="./src/img/alpha2.jpg" alt="alpha 2 img">
+				<img class="swiper-slide" src="./src/img/alpha3.jpg" alt="alpha 3 img">
+			</div>
+
+
+		</section>
+
+		<section class="bestseller">
+			<div class="container">
+				<h1>Bestseller</h1>
+				<div class="swiper">
+
+					<div class="bestseller__list product swiper-wrapper" id="product-track">
+
+					</div>
+					<div class="swiper-button-next">&#8680;</div>
+					<div class="swiper-button-prev">&#8678;</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+
+			</div>
+
+		</section>
+		<section class="stock">
+			<div class="container">
+				<h2>Stock</h2>
+				<div class="swiper">
+					<div class="stock__list product  swiper-wrapper" id="product-track">
+
+					</div>
+
+					<div class="swiper-button-next">&#8680;</div>
+					<div class="swiper-button-prev">&#8678;</div>
+					<div class="swiper-pagination"></div>
+
+				</div>
+
+			</div>
+
+		</section>
+		<section class="accessories">
+			<div class="container">
+				<h2>Accessories</h2>
+				<div class="swiper">
+					<div class="accessories__list product  swiper-wrapper" id="product-track">
+
+
+					</div>
+
+					<div class="swiper-button-next">&#8680;</div>
+					<div class="swiper-button-prev">&#8678;</div>
+					<div class="swiper-pagination"></div>
+
+				</div>
+
+			</div>
+
+		</section>
+
+		<section class="map">
+			<div class="container">
+				<h2>Where i can find you?</h2>
+
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2904.4553297466746!2d5.373263418382298!3d43.283785415084026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c9c0b44cda2949%3A0x8e0a284f7c57a1e9!2sBd%20Vauban%2C%2013006%20Marseille!5e0!3m2!1sru!2sfr!4v1715288230405!5m2!1sru!2sfr"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+
+		</section>
+
+		<section class="comments">
+			<div class="container">
+				<div class="comments__header">
+					<div class="row">
+						<h2>Comments about our site</h2>
+						<button>Add coment</button>
+					</div>
+				</div>
+				<div class="comments__list row">
+
+				</div>
+			</div>
+		</section>
+
+		<div class="comment__modal">
+			<div class="comment__modal-window">
+				<h2>Add comment</h2>
+				<form>
+					<input id="comment-user" type="text" placeholder="Write your name" required>
+					<input id="comment-title" type="text" placeholder="Write comment title" required>
+					<textarea rows="5" placeholder="Write comment" required></textarea>
+					<button class="comment__modal-plus">Send comment</button>
+				</form>
+				<button class="comment__modal-close">x</button>
+			</div>
+		</div>
+
+
+
+
+	</main>
+
+
+	<footer>
+		<div class="container">
+			<div class="footer__items">
+				<div class="row">
+					<p>All rights reserved:</p>
+					<div class="footer__social-link">
+						<div class="row">
+							<a href="#"><img src="./src/img/tiktok.png" alt="footer tik-tok img"></a>
+							<a href="#"><img src="./src/img/insta.png" alt="footer instagram img"></a>
+							<a href="#"><img src="./src/img/fb.png" alt="footer facebook img"></a>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</footer>
+
+	<div class="basket-modal row">
+		<div class="basket__modal-window">
+			<div class="basket__header">
+				<div class="row">
+					<h3>In the basket</h3>
+					<button>&times;</button>
+				</div>
+			</div>
+			<div class="basket__main-list">
+
+			</div>
+			<div class="basket__footer">
+				<div class="row">
+					<p><a href="./index.html"> &lt; Back to products</a></p>
+
+					<div class="buy__products-is__basket">
+						<div class="row">
+							<p class="products__receipt">The total amount of the order - <span>1500</span> $</p>
+							<button><a href="./src/pages/recipes.html">Place an Order</a></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- <script defer src="./src/script/basket.js"></script> -->
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script src="./src/script/slider.js"></script>
+	<script defer src="./script.js" type="module"></script>
+</body>
+
+</html>

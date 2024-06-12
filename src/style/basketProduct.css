@@ -1,0 +1,109 @@
+.prod__basket-img{
+    width: 230px;
+     height: 160px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.473);
+ }
+ .prod__basket-img img{
+     border-radius: 10px;
+     width: 100%;
+      height: 100%;
+     object-fit: cover; 
+ }
+
+ .prod__basket.row h3,p{
+    width: 200px;
+}
+
+ .prod__basket{
+    margin-bottom: 20px;
+ }
+ .prod__basket:nth-last-child(1){
+ margin-bottom: 0;
+}
+ 
+ 
+ .prod__basket-total button{
+     width: 35px;
+     background: black;
+     color: white;
+     border: none;
+     font-size: 20px;
+     border-radius: 5px;
+     cursor: pointer;
+     transition: all 0.2s;
+ }
+ 
+ .prod__basket-total button:hover{
+ background: white;
+ color: black;
+ }
+ 
+ .prod__basket-delete{
+     width: 70px;
+     background: black;
+     color: white;
+     border: none;
+     font-size: 20px;
+     border-radius: 5px;
+     cursor: pointer;
+     transition: all 0.2s;
+ }
+ .prod__basket-delete:hover{
+     background: white;
+     color: black;
+ }
+ /* ---------------------------------------------ADAPTIVE----------------------------------ADAPTIVE----------------------------------------------------------- */
+ @media all and (max-width: 1045px){
+.prod__basket.row h3,p{
+    width: 150px;
+}
+
+ }
+ 
+ 
+ @media all and (max-width: 843px){
+
+    .prod__basket.row h3,p{
+        width: 100%;
+        text-align: center;
+    }
+    .prod__basket-img{
+        width: 350px;
+         height: 200px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.473);
+     }
+ 
+     .prod__basket-descr h3{
+         text-align: center;
+     }
+ }
+ 
+ @media all and (max-width: 626px){
+     .prod__basket.row{
+         flex-direction: column;
+         justify-content: center;
+     }
+ 
+     .prod__basket-delete{
+         width: 130px;
+         background: black;
+         color: white;
+         border: none;
+         font-size: 20px;
+         border-radius: 5px;
+         cursor: pointer;
+         transition: all 0.2s;
+     }
+ 
+ }
+
+ @media all and (max-width: 450px){
+    .prod__basket-img{
+        width: 230px;
+         height: 160px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.473);
+     }
+ }
