@@ -11,9 +11,7 @@
      object-fit: cover; 
  }
 
- .prod__basket.row h3,p{
-    width: 200px;
-}
+
 
  .prod__basket{
     margin-bottom: 20px;
@@ -54,12 +52,7 @@
      color: black;
  }
  /* ---------------------------------------------ADAPTIVE----------------------------------ADAPTIVE----------------------------------------------------------- */
- @media all and (max-width: 1045px){
-.prod__basket.row h3,p{
-    width: 150px;
-}
 
- }
  
  
  @media all and (max-width: 843px){
@@ -78,26 +71,14 @@
      .prod__basket-descr h3{
          text-align: center;
      }
- }
- 
- @media all and (max-width: 626px){
      .prod__basket.row{
-         flex-direction: column;
-         justify-content: center;
-     }
- 
-     .prod__basket-delete{
-         width: 130px;
-         background: black;
-         color: white;
-         border: none;
-         font-size: 20px;
-         border-radius: 5px;
-         cursor: pointer;
-         transition: all 0.2s;
-     }
- 
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
  }
+ 
+
 
  @media all and (max-width: 450px){
     .prod__basket-img{
