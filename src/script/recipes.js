@@ -1,4 +1,4 @@
-import { getProductsFromCard, sendDataTelegramm } from "../service/service.js";
+import { getProductsFromCard, sendDataTelegramm, postOrder } from "../service/service.js";
 import { renderBasketProd } from "./basket.js";
 import { saveProductFromCard } from "../service/service.js";
 
@@ -17,7 +17,6 @@ checkoutList.addEventListener("click", (event) => {
 	let cardId = event.target.closest(".prod__basket").dataset.id
 	let index = allProds.findIndex(el => el.id === cardId)
 
-	//  console.log(event.target)
 
 	if (event.target.closest(".prod__basket-minus")) {
 		allProds[index].counter === 1 ? allProds.splice(index, 1) : allProds[index].counter--
@@ -37,27 +36,46 @@ checkoutList.addEventListener("click", (event) => {
 recipesForm.addEventListener("submit", (event) => {
 	event.preventDefault()
 
-
-	// recipesInps.value = "" / udalit inp.value posle otpravki formi
-
-
 	let allProdsMessage = ""
+	let allProdForHtml = []
 
 	allProds.forEach(element => {
-		allProdsMessage += `Product ${element.id} - ${element.counter} quantity. \n`
+		allProdsMessage += `Product ${element.id} - quantity - ${element.counter} \n`
+		
+		allProdForHtml.push({
+			productId: element.id,
+			count: element.counter
+		})
+
 	})
-
 	let allPrice = allProds.reduce((acc, value) => acc + value.price * value.counter, 0)
-
 	let message = `New order from the site!\n\nRecipient information:\n\n${recipesInps[0].value}\n${recipesInps[1].value}\n${recipesInps[2].value}\n${recipesInps[3].value}\n\nProducts:\n\n${allProdsMessage}\n\nAll price: ${allPrice} $`
 
-	sendDataTelegramm(message).then(() => {
-		messageSuccessfully.style.display = "block"
-		setTimeout(() => { messageSuccessfully.style.display = "none" }, 2000)
+	
+	let newOrder = {
+		userName: recipesInps[0].value,
+		adres: recipesInps[1].value,
+		telephone:recipesInps[2].value,
+		email:recipesInps[3].value,
+		products: allProdForHtml, 
+		allPrice: allPrice,
+		status: "Waiting"
+	}
 
-		recipesInps.forEach(inp => {
-			inp.value = ""
-		})
+
+	postOrder(newOrder).then((data) => {
+        if(data && data.userName){
+
+			sendDataTelegramm(message).then(() => {
+				recipesInps.forEach(inp => {
+					inp.value = ""
+				})
+			})
+			alert("Your orders is accepted")
+          	localStorage.removeItem("card-prod")
+			location.pathname = "/"
+       
+		}
 	})
 })
 

@@ -3,6 +3,23 @@ const _CHAT_ID = "-1002148714160"
 const _TG_TOKEN_BOT = "7141297747:AAF-C8kIerz6ChQfzhWg1lqk937DyAr-9BY"
 const _TG_URL = `https://api.telegram.org/bot${_TG_TOKEN_BOT}/sendMessage`
 
+const _ORDERS = "https://667c5be33c30891b865c62e9.mockapi.io/Orders"
+
+async function postOrder(newOrder) {
+	try {
+		let resolve = await fetch(_ORDERS , {
+			method: 'POST',
+			headers: { 'content-type': 'application/json' },
+			body: JSON.stringify(newOrder)
+		})
+		let result = await resolve.json()
+		return result
+
+	} catch (error) {
+		return error
+	}
+}
+
 
 async function getData(param, option = "") {
 	try {
@@ -103,6 +120,6 @@ function saveProductFromCard(data) {
 
 
 
-export { getData, renderProd, postData, renderComments, getProductsFromCard, saveProductFromCard, sendDataTelegramm}
+export { getData, renderProd, postData, renderComments, getProductsFromCard, saveProductFromCard, sendDataTelegramm, postOrder}
 
 
